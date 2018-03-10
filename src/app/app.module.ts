@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import {HeroService} from './hero.service';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [HeroService],  /*앱 모듈이 생성될때 히어로 서비스가 인스턴스 생성됨 1. 등록 */
   bootstrap: [AppComponent]
 })
 export class AppModule { }
